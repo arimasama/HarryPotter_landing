@@ -23,12 +23,37 @@
             <p>© 2025 Mundo Mágico de Harry Potter. No oficial.</p>
         </footer>
     </div>
-    <!-- n8n Chat Widget Script -->
+    <div id="n8n-chat"></div>
+    <!-- n8n Chat Widget Script personalizado -->
     <script type="module">
         import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
         createChat({
-            // Reemplaza esta URL por la de tu webhook de producción de n8n
-            webhookUrl: 'https://ariman8nwebhook.arimadev.com/webhook/b5dc00c2-c112-4247-9397-f2957fd6d507/chat'
+            webhookUrl: 'https://ariman8nwebhook.arimadev.com/webhook/b5dc00c2-c112-4247-9397-f2957fd6d507/chat',
+            webhookConfig: {
+                method: 'POST',
+                headers: {}
+            },
+            target: '#n8n-chat',
+            mode: 'window',
+            chatInputKey: 'chatInput',
+            chatSessionKey: 'sessionId',
+            loadPreviousSession: true,
+            metadata: {},
+            showWelcomeScreen: false,
+            defaultLanguage: 'es',
+            initialMessages: [
+                '¡Hola! 👋',
+                'Soy el Mago Asistente. ¿En qué puedo ayudarte sobre el mundo de Harry Potter?'
+            ],
+            i18n: {
+                es: {
+                    title: '¡Bienvenido al chat mágico! 🧙‍♂️',
+                    subtitle: 'Haz tu pregunta sobre Harry Potter y la magia comenzará.',
+                    footer: '',
+                    getStarted: 'Nueva conversación',
+                    inputPlaceholder: 'Escribe tu pregunta...'
+                }
+            }
         });
     </script>
 </body>
