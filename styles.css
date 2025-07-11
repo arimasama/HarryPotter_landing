@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg, #1a1a1a 0%, #3c2f2f 100%);
+    font-family: 'IM Fell English SC', serif;
+    color: #f5deb3;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    background: rgba(34, 34, 34, 0.95);
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+    padding: 32px 24px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 24px;
+    letter-spacing: 2px;
+    color: #ffd700;
+    text-shadow: 2px 2px 8px #000;
+}
+
+.main-image {
+    width: 100%;
+    max-width: 380px;
+    border-radius: 12px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 12px #000;
+}
+
+.description {
+    font-size: 1.25rem;
+    margin-bottom: 32px;
+    color: #f5deb3;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #6a3900;
+    color: #ffd700;
+    padding: 12px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 8px #000;
+    transition: background 0.2s;
+}
+
+.cta-button:hover {
+    background: #ffd700;
+    color: #6a3900;
+}
+
+footer {
+    margin-top: 32px;
+    font-size: 0.95rem;
+    color: #bfa76a;
+    opacity: 0.8;
+}
